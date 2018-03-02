@@ -1,0 +1,9 @@
+#!/bin/sh
+gnome-terminal -e roscore
+sleep 2s
+gnome-terminal -x roslaunch modi35_moveit_config demo.launch
+sleep 4s
+gnome-terminal -x ./modi_rostopic
+sleep 3s
+gnome-terminal -x rosrun modi_send_msg_to_serial modi_visual_msg_to_moveit.py 
+
