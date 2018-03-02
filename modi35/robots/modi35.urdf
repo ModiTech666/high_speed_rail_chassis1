@@ -1,0 +1,449 @@
+<robot
+  name="modi35">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 8.88583092667428E-18 0.00111795560404514"
+        rpy="0 0 0" />
+      <mass
+        value="7.62592" />
+      <inertia
+        ixx="0.315223999923242"
+        ixy="1.71061952603692E-17"
+        ixz="-3.94049230657731E-18"
+        iyy="0.0312835352832417"
+        iyz="9.5666988355998E-19"
+        izz="0.342085026986667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Empty_Link1">
+    <inertial>
+      <origin
+        xyz="-0.00496363491477218 3.28732864540715E-07 0.0761174014871144"
+        rpy="0 0 0" />
+      <mass
+        value="5.10234365525503" />
+      <inertia
+        ixx="0.0209598604077396"
+        ixy="-3.52679517201698E-08"
+        ixz="0.00172448456269705"
+        iyy="0.031247437955896"
+        iyz="-9.26841953296622E-08"
+        izz="0.0287754574039484" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.025"
+      rpy="-1.525E-16 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Empty_Link1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.19"
+      upper="0.19"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link2">
+    <inertial>
+      <origin
+        xyz="0.00783103519782546 0.0855410954581869 -1.36498681413411E-07"
+        rpy="0 0 0" />
+      <mass
+        value="2.17039367498809" />
+      <inertia
+        ixx="0.00858363216798714"
+        ixy="0.000390114553366666"
+        ixz="-2.77249945705041E-08"
+        iyy="0.00458651476904357"
+        iyz="-6.41447147299273E-09"
+        izz="0.00903530800774155" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="revolute">
+    <origin
+      xyz="-0.043 0 0.16457"
+      rpy="1.5708 0 0" />
+    <parent
+      link="Empty_Link1" />
+    <child
+      link="Empty_Link2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.62"
+      upper="2.62"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link3">
+    <inertial>
+      <origin
+        xyz="-7.98527910461644E-14 0.112875562467556 5.63188384816726E-13"
+        rpy="0 0 0" />
+      <mass
+        value="3.52624639214267" />
+      <inertia
+        ixx="0.041233172227815"
+        ixy="2.62973607819944E-14"
+        ixz="5.51298212729905E-14"
+        iyy="0.0149146868305286"
+        iyz="-1.74552996710953E-13"
+        izz="0.0310672401467654" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="revolute">
+    <origin
+      xyz="0 0.134 0"
+      rpy="0 0 0" />
+    <parent
+      link="Empty_Link2" />
+    <child
+      link="Empty_Link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.05"
+      upper="2.1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link4">
+    <inertial>
+      <origin
+        xyz="-0.00457844780177411 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.712367935533829" />
+      <inertia
+        ixx="0.000914406102872464"
+        ixy="-6.7059450084943E-20"
+        ixz="-2.50154933809576E-20"
+        iyy="0.000925366730263443"
+        iyz="3.62246874783102E-20"
+        izz="0.000950494697683082" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="revolute">
+    <origin
+      xyz="0 0.25 0"
+      rpy="0 0 0" />
+    <parent
+      link="Empty_Link3" />
+    <child
+      link="Empty_Link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.49"
+      upper="0.53"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link5">
+    <inertial>
+      <origin
+        xyz="-0.063999229264772 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.09767372193279" />
+      <inertia
+        ixx="0.00222014648601928"
+        ixy="2.25512026969915E-20"
+        ixz="4.32587860913395E-19"
+        iyy="0.00332112633172226"
+        iyz="1.17143142274654E-19"
+        izz="0.00242647404297517" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="revolute">
+    <origin
+      xyz="-0.05 0 0"
+      rpy="-3.1416 1.3935E-15 -5.5511E-17" />
+    <parent
+      link="Empty_Link4" />
+    <child
+      link="Empty_Link5" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link6">
+    <inertial>
+      <origin
+        xyz="0 0.0232662375181558 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.465752765030563" />
+      <inertia
+        ixx="0.000706719690747138"
+        ixy="2.74071058853549E-19"
+        ixz="-3.97388703044191E-20"
+        iyy="0.000319565881479492"
+        iyz="-7.03667119110866E-21"
+        izz="0.000782123989281275" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="revolute">
+    <origin
+      xyz="-0.11 0 0"
+      rpy="-1.5049E-16 9.9522E-17 1.5708" />
+    <parent
+      link="Empty_Link5" />
+    <child
+      link="Empty_Link6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Empty_Link7">
+    <inertial>
+      <origin
+        xyz="0 -0.0352256337633361 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.265438046109552" />
+      <inertia
+        ixx="0.000278997857222206"
+        ixy="-1.9627606613517E-20"
+        ixz="-2.67321952895935E-20"
+        iyy="0.000288094676856989"
+        iyz="8.25457009516883E-20"
+        izz="0.00043624825096176" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://modi35/meshes/Empty_Link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J7"
+    type="revolute">
+    <origin
+      xyz="0 0.08 0"
+      rpy="1.9722E-31 -7.4508E-16 3.1416" />
+    <parent
+      link="Empty_Link6" />
+    <child
+      link="Empty_Link7" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
